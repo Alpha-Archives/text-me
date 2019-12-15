@@ -1,74 +1,41 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const ejs = require("ejs");
-const Nexmo = require("nexmo");
-const socketio = require("socket.io");
+var createError = require('http-errors');
+var express = require('express');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
 
-// Init Nexmo
-const nexmo = new Nexmo(
-  {
-    apiKey: "YOURAPIKEY",
-    apiSecret: "YOURAPISECRET"
-  },
-  { debug: true }
-);
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
 
-// Init app
-const app = express();
+var app = express();
 
-// Template engine setup
-app.set("view engine", "html");
-app.engine("html", ejs.renderFile);
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'hbs');
 
-// Public folder setup
-app.use(express.static(__dirname + "/public"));
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
 
-// Body parser middleware
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
 
-// Index route
-app.get("/", (req, res) => {
-  res.render("index");
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  next(createError(404));
 });
 
-// Catch form submit
-app.post("/", (req, res) => {
-  // res.send(req.body);
-  // console.log(req.body);
-  const { number, text } = req.body;
+// error handler
+app.use(function(err, req, res, next) {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  nexmo.message.sendSms("YOURVURTUALNUMBER", number, text, { type: "unicode" }, (err, responseData) => {
-    if (err) {
-      console.log(err);
-    } else {
-      const { messages } = responseData;
-      const { ["message-id"]: id, ["to"]: number, ["error-text"]: error } = messages[0];
-      console.dir(responseData);
-      // Get data from response
-      const data = {
-        id,
-        number,
-        error
-      };
-
-      // Emit to the client
-      io.emit("smsStatus", data);
-    }
-  });
+  // render the error page
+  res.status(err.status || 500);
+  res.render('error');
 });
 
-// Define port
-const port = 3000;
-
-// Start server
-const server = app.listen(port, () => console.log(`Server started on port ${port}`));
-
-// Connect to socket.io
-const io = socketio(server);
-io.on("connection", socket => {
-  console.log("Connected");
-  io.on("disconnect", () => {
-    console.log("Disconnected");
-  });
-});
+module.exports = app;
