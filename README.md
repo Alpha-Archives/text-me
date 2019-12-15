@@ -10,15 +10,15 @@ A minimal node.js app that sends SMS text messages using Nexmo API
 
 1. Install the dependencies
 
-```sh
-$ npm install
+```bash
+yarn
 ```
 
 2. Serve
 
-```sh
-To serve in the browser
-$ npm start
+```bash
+#To serve in the browser
+npm start
 ```
 
 ### Author

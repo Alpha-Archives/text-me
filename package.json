@@ -1,12 +1,12 @@
 {
-  "name": "nodetextapp",
-  "version": "1.0.0",
-  "description": "Send SMS from Node",
+  "name": "text-me",
+  "version": "0.0.1",
+  "description": "Send SMS from Node via Nexmo API",
   "main": "app.js",
   "scripts": {
-    "start": "node app"
+    "start": "node app.js"
   },
-  "author": "Brad Traversy",
+  "author": "Alpha Olomi <hello@alphaolomi.com>",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.19.0",
