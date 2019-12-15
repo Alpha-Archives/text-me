@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Send SMS from Node via Nexmo API",
   "main": "app.js",
+  "private": true,
   "scripts": {
     "start": "node app.js"
   },
@@ -14,5 +15,14 @@
     "express": "^4.17.1",
     "nexmo": "^2.5.2",
     "socket.io": "^2.3.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alphaolomi/text-me.git"
+  },
+  "keywords": ["sms","messaging","nexmo","nexmo-api"],
+  "bugs": {
+    "url": "https://github.com/alphaolomi/text-me/issues"
+  },
+  "homepage": "https://github.com/alphaolomi/text-me#readme"
 }
