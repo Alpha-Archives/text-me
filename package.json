@@ -10,11 +10,11 @@
   "author": "Alpha Olomi <hello@alphaolomi.com>",
   "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "ejs": "^3.0.1",
-    "express": "^4.17.1",
-    "nexmo": "^2.5.2",
-    "socket.io": "^2.3.0"
+    "body-parser": "1.19.0",
+    "ejs": "3.0.1",
+    "express": "4.17.1",
+    "nexmo": "2.5.2",
+    "socket.io": "2.3.0"
   },
   "repository": {
     "type": "git",
