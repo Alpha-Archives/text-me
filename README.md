@@ -1,17 +1,17 @@
 # TextMe [![Software License][ico-license]](LICENSE)
 
-A minimal [Node.js](#) system that sends SMS text messages using NextSMS API
+A minimal [Node.js](/) system that sends SMS text messages using NextSMS API
 
 ## ✨ Features (Technologies Used)
 
-- [Express.js](#) v4(backend)
-- [React.js](#) (Frontend)
-- [Socket.IO](#) (web scokets)
-- [Bootstrap v5](#) + [Feather Icons v5](#)
+- [Express.js](/) v4(backend)
+- [React.js](/) (Frontend)
+- [Socket.IO](/) (web scokets)
+- [Bootstrap v5](/) + [Feather Icons v5](/)
 
 ### Exteral Services
 
-- [NextSMS]() SMS Gateway
+- [NextSMS](/) SMS Gateway
 
 ## Getting started
 
