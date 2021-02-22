@@ -1,7 +1,7 @@
 import app from "../app";
 import debug from "debug";
 debug("text-me:server");
-import http from "http";
+import * as http from "http";
 
 /**
  * Normalize a port into a number, string, or false.
