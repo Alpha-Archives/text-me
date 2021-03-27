@@ -1,17 +1,21 @@
-# TextMe [![Software License][ico-license]](LICENSE) 
+# TextMe [![Software License][ico-license]](LICENSE)
 
-A minimal node.js system that sends SMS text messages using Nexmo API
+A minimal [Node.js](/) system that sends SMS text messages using NextSMS API
 
+## ✨ Features (Technologies Used)
 
-#### ✨Features (Technologies Used)
+- [Express.js](/) v4(backend)
+- [React.js](/) (Frontend)
+- [Socket.IO](/) (web scokets)
+- [Bootstrap v5](/) + [Feather Icons v5](/)
 
-- Expressjs v4
-- Socket.IO
-- Bootstrap 4 + Feather Icons 5
+### Exteral Services
+
+- [NextSMS](/) SMS Gateway
 
 ## Getting started
 
-You will need to add your own Nexmo api key, secret and virtual number
+You will need to add a NextSMS api key, secret and virtual number
 
 ### Installation
 

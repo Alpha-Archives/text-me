@@ -20,3 +20,28 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 ### Security
 - Nothing
+
+
+## 0.1.0 - 2021-02-22
+
+### Added
+- Nothing
+
+### Deprecated
+- Nothing
+
+### Fixed
+- Nothing
+
+### Removed
+- Nothing
+
+### Security
+- Nothing
+
+
+
+## 0.0.1 - 2019-10-30
+
+- Use Nexmo for sending Mesages
+- Added Basic UI 
