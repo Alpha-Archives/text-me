@@ -1,21 +1,37 @@
 {
   "name": "text-me",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "Send SMS from Node via Nexmo API",
+  "keywords": ["sms","messaging","nexmo","nexmo-api"],
+  
   "private": true,
-  "scripts": {
+  "main": "node ./bin/www",
+  "scripts": {  
+    "debug": "DEBUG=text-me:* yarn start",
     "build": "tsc",
     "start": "node ./dist/bin/main.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",    
+    "debug": "~4.1.1",    
+    "hbs": "~4.0.6",
+    "http-errors": "~1.7.3",           
     "morgan": "~1.9.1",
     "nexmo": "^2.9.1",
     "socket.io": "^3.1.1",
     "body-parser": "^1.19.0",
     "ejs": "^3.0.1",
-    "express": "^4.17.1"        
+    "express": "^4.17.1"             
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alphaolomi/text-me.git"
+  },  
+  "bugs": {
+    "url": "https://github.com/alphaolomi/text-me/issues"
+  },
+  "homepage": "https://github.com/alphaolomi/text-me#readme"      
+  ,
   "devDependencies": {
     "@types/node": "^14.14.31",
     "typescript": "^4.1.5"
