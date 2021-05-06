@@ -14,7 +14,7 @@
   "dependencies": {
     "cookie-parser": "~1.4.5",
     "debug": "~4.3.1",    
-    "hbs": "~4.1.1",
+    "hbs": "~4.1.2",
     "http-errors": "~1.8.0",           
     "morgan": "~1.10.0",
     "nexmo": "^2.9.1",
@@ -33,7 +33,7 @@
   "homepage": "https://github.com/alphaolomi/text-me#readme"      
   ,
   "devDependencies": {
-    "@types/node": "^15.0.0",
-    "typescript": "^4.2.3"
+    "@types/node": "^15.0.2",
+    "typescript": "^4.2.4"
   }
 }
